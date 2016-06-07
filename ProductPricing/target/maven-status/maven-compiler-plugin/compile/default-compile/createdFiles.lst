@@ -1,0 +1,4 @@
+com\pricing\dao\PricingDAO.class
+com\pricing\controller\PricingController.class
+com\pricing\entity\ProductPrice.class
+com\pricing\DemoApplication.class

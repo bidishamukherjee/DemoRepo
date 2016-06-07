@@ -1,0 +1,5 @@
+com\orch\SearchTypeEnum.class
+com\orch\dao\ProductDetailDAO.class
+com\orch\bean\ProductDetail.class
+com\orch\controller\ProductDetailController.class
+com\orch\DemoApplication.class

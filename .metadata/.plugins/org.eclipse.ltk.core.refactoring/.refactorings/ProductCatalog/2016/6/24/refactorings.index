@@ -1,0 +1,9 @@
+1465208077569	Rename type 'GreetingController'
+1465209601443	Rename package 'com.example'
+1465209615621	Rename package 'com.example.controller'
+1465209630733	Rename package 'com.example.entity'
+1465209840662	Delete element
+1465214642855	Rename field 'manufacturer'
+1465215734058	Encapsulate field 'searchType'
+1465224943526	Copy compilation unit
+1465282692840	Rename type 'DemoApplication'

@@ -1,0 +1,31 @@
+package com.catalogue;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.orm.jpa.EntityScan;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
+import com.catalogue.dao.ProductDAO;
+import com.catalogue.entity.Product;
+
+@SpringBootApplication
+@EnableWebMvc
+@EntityScan(basePackages="com.catalogue.entity")
+
+public class DemoApplication {
+
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = SpringApplication.run(DemoApplication.class, args);
+		ProductDAO productDAO=(ProductDAO)context.getBean("productDAO");
+		productDAO.save(new ProductPrice("101", "head first java", "oreily", "book"));
+		productDAO.save(new ProductPrice("102", "head first servlet jsp", "oreily", "book"));
+		productDAO.save(new ProductPrice("103", "head first sql", "oreily", "book"));
+		productDAO.save(new ProductPrice("104", "bat", "rbk", "sports"));
+		productDAO.save(new ProductPrice("105", "football", "nike", "sports"));
+		
+		
+		
+	}
+}

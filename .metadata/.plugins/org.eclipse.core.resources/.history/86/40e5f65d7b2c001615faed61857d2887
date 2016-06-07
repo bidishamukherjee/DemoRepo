@@ -1,0 +1,15 @@
+package com.orch.dao;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.orch.bean.ProductDetail;
+
+public interface ProductDetailDAO extends CrudRepository<ProductDetail, String> {
+
+	List<ProductDetail> findByType(String type);
+	
+	List<ProductDetail> findByBrand(String brand);	
+	
+}

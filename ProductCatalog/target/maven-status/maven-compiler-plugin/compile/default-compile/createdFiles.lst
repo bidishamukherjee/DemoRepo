@@ -1,0 +1,5 @@
+com\catalogue\controller\ProductCatalogueController.class
+com\catalogue\dao\ProductDAO.class
+com\catalogue\entity\Product.class
+com\catalogue\DemoApplication.class
+com\catalogue\SearchTypeEnum.class

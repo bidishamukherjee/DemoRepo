@@ -1,0 +1,8 @@
+package com.orch.dao;
+
+
+public interface ProductDetailDAO  {
+
+	
+	
+}

@@ -1,0 +1,11 @@
+package com.orch.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.orch.bean.ProductDetail;
+
+public interface ProductDetailDAO  {
+
+	
+	
+}
