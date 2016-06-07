@@ -1,22 +1,14 @@
 package com.orch.controller;
 
-import javax.validation.Valid;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.catalogue.entity.Product;
-import com.orch.SearchTypeEnum;
 import com.orch.bean.ProductDetail;
 import com.orch.dao.ProductCatalogClient;
-import com.orch.dao.ProductPricingClient;
 import com.orch.service.ProductDetailsService;
 
 @RestController
@@ -30,25 +22,13 @@ public class ProductDetailController {
 	private ProductDetailsService productDetailsService;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public Iterable<ProductDetail> getAllProducts() {
+	public List<ProductDetail> getAllProducts() {
 		return productDetailsService.getAllProducts();
 	}
 
-	@RequestMapping(value = "/search/{searchType}", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/search/{searchType}", method = RequestMethod.GET)
 	public Iterable<ProductDetail> getSpecificProducts(
-			@PathVariable("searchType") String searchType,
-			@RequestParam("searchValue") String searchValue) {
-		if (SearchTypeEnum.BRAND.equals(SearchTypeEnum.valueOf(searchType))) {
-			// repository.findByBrand(searchValue);
-			// return repository.findByBrand(searchValue);
-			return null;
-		} else if (SearchTypeEnum.TYPE.equals(SearchTypeEnum
-				.valueOf(searchType))) {
-			// return repository.findByType(searchValue);
-			return null;
-		} else {
-			return null;
-		}
+		
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
@@ -63,5 +43,5 @@ public class ProductDetailController {
 	public void remove(@PathVariable("id") String id) {
 		// repository.delete(id);
 	}
-
+*/
 }
